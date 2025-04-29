@@ -1,5 +1,10 @@
-import React from 'react';
+import { ReactNode } from 'react';
 
-export const Button = () => {
-  return <div>Button</div>;
-};
+interface ButtonProps {
+  children: ReactNode;
+  className?: string;
+}
+
+export function Button({ children, className }: ButtonProps) {
+  return <button className={className}>{children}</button>;
+}
